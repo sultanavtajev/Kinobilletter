@@ -19,7 +19,9 @@ public class BillettController {
     }
 
     @GetMapping("/hentAlle")
-    public List<Billetter> hentAlle() {return rep.hentBilletter();}
+    public List<Billetter> hentAlle() {
+        return rep.hentBilletter();
+    }
 
     @GetMapping("/slettAlle")
     public void slettAlle() {
