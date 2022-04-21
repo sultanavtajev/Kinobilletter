@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title class="mt-1">Bestilling av kinobilletter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="row justify-content-around pt-2">
+    <div class="col-md-4 border border-light rounded pt-2 bg" id="form">
+        <form class="form">
+            <h1 class="mx-auto">BESTILL KINOBILLETTER</h1>
+            <div class="form-group">
+                <select class="form-control" id="film" >
+                    <option value="" selected="selected">Velg film her</option>
+                    <option value="The Power Of The Dog">The Power Of The Dog</option>
+                    <option value="The Unforgivable">The Unforgivable</option>
+                    <option value="Stillwater">Stillwater</option>
+                    <option value="Infinite">Infinite</option>
+                    <option value="The Rescue">The Rescue</option>
+                </select>
+                <label id="tfilm" style="color:white"></label>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" id="antallb" min="1" placeholder="Antall billetter"/>
+                <label id="tantallb" style="color:white"></label>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="fornavn" placeholder="Fornavn"/>
+                <label id="tfornavn" style="color:white"></label>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="etternavn" placeholder="Etternavn"/>
+                <label id="tetternavn" style="color:white"></label>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="telefonnr" placeholder="Telefonnr"/>
+                <label id="ttelefonnr" style="color:white"></label>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="epost" placeholder="E-post"/>
+                <label id="tepost" style="color:white"></label>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-warning" onclick="kjopreg()">Bestill</button>
+                <label id="allefelt" style="color:white"></label>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-5 border border-light rounded pt-2 bg" id="billetter">
+        <h1 class="mx-auto"><span class="material-icons md-40">receipt</span> ALLE BILLETTER</h1>
+        <div id="billettregister"></div>
+        <button class="btn btn-danger" onclick="slettAlle()">Slett alle billetter</button>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        hentAlle()
+        console.log("Tabell lastet")
+    });
+</script>
