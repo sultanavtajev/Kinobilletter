@@ -59,6 +59,7 @@ function kjopreg() {
         }
         $.post("/lagre", billett, function () {
             hentAlle();
+            console.log("Billett sendt til server");
         });
         $("#film").val("");
         $("#antallb").val("");
@@ -66,15 +67,13 @@ function kjopreg() {
         $("#etternavn").val("");
         $("#telefonnr").val("");
         $("#epost").val("");
-
-        console.log("Billett sendt til server");
-        console.log("Inputfelt nullet");
+        console.log("Alle inputfelt nullet");
     }
 }
 
 function hentAlle() {
     $.get("/hentAlle", function (billetter) {
-        console.log("Billett mottatt fra server");
+        console.log("Alle billetter hentet fra server");
         formaterData(billetter);
     });
 }
