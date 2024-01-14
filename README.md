@@ -1,16 +1,7 @@
-# Oblig 3
+JavaScript-applikasjon som registrerer kjøp av kinobilletter. Programmert ved bruk av Spring Boot og Java. Stylet med Bootstrap.
 
-OsloMet brukernavn: s199219
+Etter at knappen "Kjøp billett" er trykket skal billetten lagres i en tabell i en relasjonsdatabase. Tabellen listes ut under "Alle billetter". Etter at det er registrert en bestilling blir alle inputfelt tømt slik at en ny billett kan registreres.
 
-GitHub brukernavn: sultanavtajev
+Knappen "Slett alle billettene" sletter alle billettene (tømmer tabellen).
 
-GitHub repo URL: https://github.com/DATA1700/oblig-3-sultanavtajev
-
-URL til Heroku app: 
-
-Fullt navn: Sultan Aslanovitsj Avtajev
-
-Kort beskrivelse av applikasjon (5–10 setninger):
-Dette er en JavaScript-applikasjon som registrerer kjøp av kinobilletter. Billettene lagres i en database på en
-tjener/server. Dette er nøyaktig samme applikasjon som oblig 2, bare at her lagres alle data i en database på serveren.
-
+Det er også kodet input-validering som sjekker at alle inputfeltene inneholder noe. Dersom et eller flere av feltene er tomme når knappen "Kjøp billett" trykkes så vises det feilmeldinger etter det respektive feltet og det lagres ikke noe.
